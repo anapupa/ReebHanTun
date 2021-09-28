@@ -1,6 +1,4 @@
-/*****************************************************************************/
-"ReebHanTun" software for computing Handle and Tunnel loops of 3D surfaces 
-/*****************************************************************************/
+# "ReebHanTun" software for computing Handle and Tunnel loops of 3D surfaces 
 
 "ReebHanTun" software is developed by the Jyamiti research group headed by 
 Prof. Tamal K. Dey at the Department of Computer Science and Engineering 
@@ -8,9 +6,8 @@ of The Ohio State University.
 
 The binaries are distributed for: Windows 64bit and Ubuntu Linux 32bit;
 
-=================================
-DESCRIPTION
-=================================
+## DESCRIPTION
+
 
 The "ReebHanTun" software can compute two families of non-trivial loops 
 called handle and tunnel loops for any orientable 3D surface mesh.
@@ -22,46 +19,39 @@ This software is developed based on the following paper:
  
 "ReebHanTun" software can be used in the following two cases so far:
 
-(1) Connected, closed and orientable 3D surface meshes:
+- Connected, closed and orientable 3D surface meshes:
 
-* For a connected, closed and orientable surface mesh of genus g, 
+> For a connected, closed and orientable surface mesh of genus g, 
 the "ReebHanTun" software takes the mesh as input and 
 computes g Handle loops and g Tunnel loops.
 All computed loops are vertex-edge paths on the input mesh.
 
-(2) Connected and orientable 3D surface meshes with boundaries:
+- Connected and orientable 3D surface meshes with boundaries:
 
-* For a connected and orientable surface mesh of genus g 
+> For a connected and orientable surface mesh of genus g 
 with disk type boundaries, 
 the "ReebHanTun" software takes the open mesh as input and
 computes g Handle loops and g Tunnel loops.
 All computed loops are vertex-edge paths on the input non-closed mesh.
 
---------------------------------------------------------------
-WARNING:  
+---
+_**WARNING**_:  
 As described in the paper, the "ReebHanTun" software
 uses a very simple heuristic to handle meshes with boundaries.
 For meshes with small disk type boundaries,  
 the "ReebHanTun" software can produce correct output.
 However, it is possible that the "ReebHanTun" software will not be 
 robust for arbitrary boundaries.  
---------------------------------------------------------------
 
-=================================
-USAGE
-=================================
+### USAGE
 
 The usages for two cases are the same.
--------------------------------------------------------------------------------
-./ReebHanTun -I <input_mesh> -O <outfile> [-options]
--------------------------------------------------------------------------------
 
-=================================
+`./ReebHanTun -I <input_mesh> -O <outfile> [-options]`
+
+```
 INPUT PARAMETERS:
-=================================
-
 <input_mesh>       	: input 3D surface mesh in OFF format:
-		/////////////////
 												OFF
 												#v #f #e
 												v1_x v1_y v1_z
@@ -72,21 +62,15 @@ INPUT PARAMETERS:
 												3 v2_1 v2_2 v2_3
 												...
 												3 vm_1 vm_2 vm_3						
-												/////////////////
-
- 
 
 <outfile> : the name that the user gives for the output files
-
- 
 
 [-options]   : can be one of the following:
 	       	-h      (Help information)
 	       	-l     	(Display full license) 
+```
 
-=================================
-OUTPUT FILES:
-=================================
+### OUTPUT FILES:
 
 "ReebHanTun" produces two output files: one mesh file for visualization of 
 the Handle / Tunnel loops, and one file that contain the loop information 
@@ -139,11 +123,8 @@ ReebHanTun Usage:
 
 Command : "ReebHanTun -I eight.off -O eight -l"
 The additional '-l' option will display the license information.
- 
 
-=================================
-LEGAL TERMS
-=================================
+### LEGAL TERMS
 
 THIS SOFTWARE IS PROVIDED "AS-IS". THERE IS NO WARRANTY OF ANY KIND. 
 NEITHER THE AUTHORS NOR THE OHIO STATE UNIVERSITY WILL BE LIABLE FOR 
@@ -159,8 +140,8 @@ The CGAL library's license
 (which applies to the CGAL library ONLY and NOT to this program itself) is 
 as follows:
  
-LICENSE
----------------------------------------------------------------------------
+### LICENSE
+
 
 The CGAL software consists of several parts, each of which is licensed under
 an open source license. It is also possible to obtain commercial licenses
@@ -220,17 +201,3 @@ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
 FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
----------------------------------------------------------------------------
-
-ANN library's license
-(which applies to the ANN library ONLY and NOT to this program itself) is 
-as follows:
-
-LICENSE
----------------------------------------------------------------------------
-The ANN Library (all versions) is provided under the terms and
-conditions of the GNU Lesser General Public Library, which is stated
-below.  It can also be found at:
-
-   http://www.gnu.org/copyleft/lesser.html
----------------------------------------------------------------------------
